@@ -1,0 +1,34 @@
+{
+    "$schema": "https://deno.land/x/denon@2.3.2/schema.json",
+    "watch": false,
+    "watcher": {
+        "interval": 300,
+        "skip": ["public/*"],
+        "legacy": false
+    },
+    "scripts": {
+        "build": {
+          "cmd": "deno bundle src/client.tsx public/assets/js/client.bundle.js",
+          "desc": "bundle my client.tsx file"
+        },
+        "start": [
+            {
+                "cmd": "deno bundle src/client.tsx public/assets/js/client.bundle.js",
+                "desc": "bundle my client.tsx file"
+            },
+            {
+                "cmd": "deno run main.ts -- --browse serve",
+                "desc": "run web server",
+                "allow": [
+                    "env",
+                    "net",
+                    "read",
+                    "run"
+                ],
+                "watch": true,
+                "unstable": true
+            }
+        ],
+        "cache": "deno cache src/deps/*.ts"
+    }
+  }

@@ -1,25 +1,25 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "deno-react-minimal-frontend",
+  "version": "1.0.0",
+  "description": "Deno+React Frontend, minimal setup",
+  "author": {
+    "name": "Chakrit W.",
+    "email": "quaos.qrz@gmail.com",
+    "url": "https://github.com/quaos/"
+  },
+  "repository": {
+    "github": "https://github.com/quaos/deno-react-minimal-frontend"
+  },
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+    "prepare": "deno bundle src/client.tsx public/assets/js/client.bundle.js",
+    "build": "deno bundle src/client.tsx public/assets/js/client.bundle.js",
+    "start": "deno run --allow-env --allow-net --allow-read --allow-run main.ts -- --browse serve",
+    "debug": "denon start",
+    "cache": "deno cache src/deps/*.ts"
   },
   "dependencies": {
-    "expo": "~38.0.8",
-    "expo-status-bar": "^1.0.2",
-    "react": "~16.11.0",
-    "react-dom": "~16.11.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
-    "react-native-web": "~0.11.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "@types/react": "~16.9.41",
-    "@types/react-native": "~0.62.13",
-    "typescript": "~3.9.5"
   },
   "private": true
 }
