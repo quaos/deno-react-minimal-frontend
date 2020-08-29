@@ -1,6 +1,6 @@
 {
   "name": "deno-react-minimal-frontend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Deno+React Frontend, minimal setup",
   "author": {
     "name": "Chakrit W.",

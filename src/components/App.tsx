@@ -17,7 +17,7 @@ const App = (props: any) => {
         <img src="assets/img/deno-logo.png" style={styles.logo} />
         <img src="assets/img/react-logo192.png" style={styles.logo} />
       </p>
-      <p>Open up App.tsx to start working on your app!1</p>
+      <p>Open up App.tsx to start working on your app!</p>
     </div>
   );
 };
