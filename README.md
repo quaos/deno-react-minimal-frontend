@@ -4,11 +4,13 @@
 
 * npm
 ```shell
+npm run build
 npm start
 ``` 
 
 * yarn
 ```shell
+yarn run build
 yarn start
 ```
 

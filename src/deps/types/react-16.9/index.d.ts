@@ -33,10 +33,10 @@
 // to 'react/experimental' in their project. See experimental.d.ts's top comment
 // for reference and documentation on how exactly to do it.
 
-//Q: Modify imports for Deno
+//quaos: Tweak for Deno
 /// <reference path="./global.d.ts" />
 
-//Q: Modify imports for Deno
+//quaos: Tweak for Deno
 import * as CSS from "../csstype-3.0/index.d.ts";
 import * as PropTypes from "../prop-types-15.7/index.d.ts";
 
@@ -63,8 +63,9 @@ interface SchedulerInteraction {
   timestamp: number;
 }
 
+//quaos: Tweak for Deno
 // tslint:disable-next-line:export-just-namespace
-export = React;
+//export = React;
 export as namespace React;
 
 declare namespace React {
