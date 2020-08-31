@@ -11,8 +11,8 @@
     "github": "https://github.com/quaos/deno-react-minimal-frontend"
   },
   "scripts": {
-    "prepare": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.bundle.js",
-    "build": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.bundle.js",
+    "_build_denobundle": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.bundle.js",
+    "build": "deno run --allow-env --allow-net --allow-read --allow-write --unstable https://deno.land/x/denopack@0.8.0/cli.ts -c denopack.config.ts",
     "start": "deno run --allow-env --allow-net --allow-read --allow-run main.ts -- --browse serve",
     "debug": "denon start",
     "cache": "deno cache src/deps/*.ts"

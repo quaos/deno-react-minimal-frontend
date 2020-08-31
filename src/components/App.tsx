@@ -14,7 +14,11 @@ const App = (props: any) => {
   let [ loading, setLoading ] = React.useState(true);
 
   React.useEffect(() => {
-    const timerId = setTimeout(() => setLoading(false), 1000);
+    console.log("Start loading...");
+    const timerId = setTimeout(() => {
+      setLoading(false);
+      console.log("Finished loading");
+    }, 1000);
 
     return () => {
       //cleanup
