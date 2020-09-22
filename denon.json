@@ -12,19 +12,25 @@
             "desc": "bundle my client.tsx file"
         },
         "build": {
-            "cmd": "deno run --allow-env --allow-net --allow-read --allow-write --unstable https://deno.land/x/denopack@0.8.0/cli.ts -c denopack.config.ts",
+            "cmd": "deno run main.ts -- build",
             "desc": "bundle my client.tsx file",
-            "watch": false
+            "allow": [
+                "env",
+                "net",
+                "read",
+                "run"
+            ],
+            "watch": false,
+            "unstable": true
         },
         "start": [
             {
-                "cmd": "deno run https://deno.land/x/denopack@0.8.0/cli.ts -c denopack.config.ts",
+                "cmd": "deno run main.ts -- build",
                 "desc": "bundle my client.tsx file",
                 "allow": [
                     "env",
                     "net",
                     "read",
-                    "write",
                     "run"
                 ],
                 "watch": false,
