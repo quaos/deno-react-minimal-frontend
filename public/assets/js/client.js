@@ -2260,10 +2260,6 @@ function dew$5() {
                             throw error;
                         }
                     }
-                    else {
-                        // No catch in prod codepath.
-                        return workLoop(hasTimeRemaining, initialTime);
-                    }
                 }
                 finally {
                     currentTask = null;
@@ -22588,9 +22584,6 @@ function dew$9() {
                                 var currentTime = getCurrentTime();
                                 var priorityLevel = inferPriorityFromExpirationTime(currentTime, expirationTime);
                                 hook.onCommitFiberRoot(rendererID, root, priorityLevel, didError);
-                            }
-                            else {
-                                hook.onCommitFiberRoot(rendererID, root, undefined, didError);
                             }
                         }
                         catch (err) {
