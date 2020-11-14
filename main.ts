@@ -8,13 +8,12 @@ async function browse(url: string) {
 }
 
 const commands: Map<string, (opts?: any) => Promise<number>> = new Map([
+  // TODO: Revise this later
   ["build", (opts?: any) => {
-    let cmd = ["denopack", "-c", "denopack.config.ts"];
-    // Workaround for Windows
-    // @ts-ignore TS2367
-    if (/^(win|windows)$/.test(Deno.build.os)) {
-      cmd = ["cmd", "/c"].concat(cmd);
-    }
+    let cmd = [
+      Deno.execPath(), "bundle", "--config", "tsconfig.json",
+      "src/client.tsx", "public/assets/js/client.js",
+    ];
     const runOpts = {
       cmd,
       env: Deno.env.toObject(),

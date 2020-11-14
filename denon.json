@@ -7,11 +7,11 @@
         "legacy": false
     },
     "scripts": {
-        "_build_denobundle": {
-            "cmd": "deno bundle src/client.tsx public/assets/js/client.bundle.js",
+        "build": {
+            "cmd": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.js",
             "desc": "bundle my client.tsx file"
         },
-        "build": {
+        "_build_denopack": {
             "cmd": "deno run main.ts -- build",
             "desc": "bundle my client.tsx file",
             "allow": [
@@ -25,16 +25,8 @@
         },
         "start": [
             {
-                "cmd": "deno run main.ts -- build",
-                "desc": "bundle my client.tsx file",
-                "allow": [
-                    "env",
-                    "net",
-                    "read",
-                    "run"
-                ],
-                "watch": false,
-                "unstable": true
+                "cmd": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.js",
+                "desc": "bundle my client.tsx file"
             },
             {
                 "cmd": "deno run main.ts -- --browse serve",

@@ -1,10 +1,8 @@
-// @deno-types="https://raw.githubusercontent.com/Soremwar/deno_types/master/react/v16.13.1/react.d.ts"
-// @ts-ignore
-export { default as React } from "https://dev.jspm.io/react@16.13.1";
+import _React from "https://esm.sh/[react,react-dom]/react?dev&no-check";
+import _ReactDOM from "https://esm.sh/[react,react-dom]/react-dom?dev&no-check";
 
-// @deno-types="https://raw.githubusercontent.com/Soremwar/deno_types/master/react-dom/v16.13.1/react-dom.d.ts"
-// @ts-ignore
-export { default as ReactDOM } from "https://dev.jspm.io/react-dom@16.13.1";
+export const React = _React;
+export const ReactDOM = _ReactDOM;
 
 declare global {
   namespace JSX {
