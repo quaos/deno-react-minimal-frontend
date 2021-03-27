@@ -8,7 +8,7 @@
     },
     "scripts": {
         "build": {
-            "cmd": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.js",
+            "cmd": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.bundle.js",
             "desc": "bundle my client.tsx file"
         },
         "_build_denopack": {
@@ -25,7 +25,7 @@
         },
         "start": [
             {
-                "cmd": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.js",
+                "cmd": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.bundle.js",
                 "desc": "bundle my client.tsx file"
             },
             {
