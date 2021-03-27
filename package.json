@@ -1,6 +1,6 @@
 {
   "name": "deno-react-minimal-frontend",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Deno+React Frontend, minimal setup",
   "author": {
     "name": "Chakrit W.",
@@ -11,7 +11,7 @@
     "github": "https://github.com/quaos/deno-react-minimal-frontend"
   },
   "scripts": {
-    "build": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.js",
+    "build": "deno bundle --config tsconfig.json src/client.tsx public/assets/js/client.bundle.js",
     "_build_denopack": "denopack -c denopack.config.ts",
     "start": "deno run --allow-env --allow-net --allow-read --allow-run main.ts -- --browse serve",
     "debug": "denon start",

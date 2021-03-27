@@ -1,7 +1,7 @@
 node_modules
 npm-debug.*
-public/assets/js/client.js
-public/assets/js/client.js.*
+public/assets/js/client.bundle.js
+public/assets/js/client.bundle.js.*
 
 .vscode/**/*
 !.vscode/settings.json
