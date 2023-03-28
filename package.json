@@ -1,6 +1,6 @@
 {
   "name": "deno-react-minimal-frontend",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Deno+React Frontend, minimal setup",
   "author": {
     "name": "Chakrit W.",
@@ -16,9 +16,7 @@
     "debug": "denon start",
     "cache": "deno cache src/deps/*.ts"
   },
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "private": true
 }
