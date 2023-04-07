@@ -1,4 +1,4 @@
-import { React } from "../deps/react.ts";
+import React, { useEffect, useState } from "../deps/react.ts";
 
 const styles = {
   logo: {
@@ -10,10 +10,12 @@ const styles = {
   },
 };
 
-const App = (props: any) => {
-  let [ loading, setLoading ] = React.useState(true);
+export interface AppProps {}
 
-  React.useEffect(() => {
+const App = ({}: AppProps) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
     console.log("Start loading...");
     const timerId = setTimeout(() => {
       setLoading(false);
@@ -23,7 +25,7 @@ const App = (props: any) => {
     return () => {
       //cleanup
       clearTimeout(timerId);
-    }
+    };
   }, []);
 
   return (

@@ -1,5 +1,26 @@
-export { default as React } from "https://esm.sh/react@17.0.2?dev&no-check";
-export { default as ReactDOM } from "https://esm.sh/react-dom@17.0.2?dev&no-check";
+import * as React from "https://esm.sh/react@18.2.0?dev";
+const {
+  createContext,
+  createElement,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} = React;
+
+export default React;
+export {
+  createContext,
+  createElement,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+};
 
 declare global {
   namespace JSX {
